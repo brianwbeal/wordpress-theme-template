@@ -4,3 +4,89 @@ Author: Brian Beal
 Description: minimal template for building custom WordPress themes
 Text Domain: wordpressbootstrapstarter
 */
+.header {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25), 0 4px 4px rgba(0, 0, 0, 0.22);
+  position: relative;
+  z-index: 3;
+}
+@media (max-width: 767px) {
+  .header {
+    background-color: #ffffff;
+  }
+}
+@media (min-width: 768px) {
+  .header__container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+.navbar {
+  background: #ffffff;
+  padding-left: 0;
+  padding-right: 0;
+}
+.navbar-brand > img {
+  max-width: 60px;
+}
+.navbar-brand > span {
+  color: #000000;
+  position: relative;
+  top: 4px;
+  left: 4px;
+}
+.navbar-toggler {
+  padding: 0;
+  width: 26px;
+  height: 20px;
+  outline: none !important;
+  display: inline-block;
+}
+.navbar-toggler:hover > span,
+.navbar-toggler:active > span,
+.navbar-toggler:focus > span {
+  background-color: #aeaeae;
+}
+.navbar-toggler > span {
+  transition: 0.15s ease-in-out;
+  display: block;
+  width: 24px;
+  height: 4px;
+  background-color: #000000;
+  margin-bottom: 3px;
+}
+.navbar #navbarCollapse {
+  justify-content: flex-end;
+}
+@media (max-width: 767px) {
+  .navbar #navbarCollapse > ul > li {
+    border-bottom: 1px solid #e0e0e0;
+  }
+}
+.navbar #navbarCollapse > ul > li:last-child {
+  border-bottom: none;
+}
+.navbar #navbarCollapse > ul > li > a {
+  color: #000000;
+  transition: 0.15s ease-in-out;
+}
+@media (max-width: 767px) {
+  .navbar #navbarCollapse > ul > li > a {
+    padding-left: 12px;
+  }
+  .navbar #navbarCollapse > ul > li > a:hover,
+  .navbar #navbarCollapse > ul > li > a:active,
+  .navbar #navbarCollapse > ul > li > a:focus {
+    background-color: #aeaeae;
+    color: #ffffff;
+  }
+}
+@media (min-width: 768px) {
+  .navbar #navbarCollapse > ul > li > a:hover,
+  .navbar #navbarCollapse > ul > li > a:active,
+  .navbar #navbarCollapse > ul > li > a:focus {
+    color: #e0e0e0;
+  }
+}
+.main {
+  padding: 100px 0px;
+}

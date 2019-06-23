@@ -13,10 +13,11 @@
 <body <?php body_class(); ?>>
 
   <header class="header">
-    <div class="header__container container p-4">
+    <div class="header__container container">
       <nav class="navbar navbar-expand-md">
         <a class="navbar-brand" href="/">
-          <span><?php echo get_bloginfo('name'); ?></span>
+          <img src="<?php echo wp_get_attachment_url(get_theme_mod('setting_logo_image')) ?>" alt="<?php echo get_theme_mod('setting_name'); ?>">
+          <span><?php echo get_bloginfo('Site Title'); ?></span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span></span>
