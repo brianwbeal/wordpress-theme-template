@@ -14,4 +14,4 @@
 
 ## Notes
 
-[live demo](https://valueris.com/)
+[live sample](https://valueris.com/)
