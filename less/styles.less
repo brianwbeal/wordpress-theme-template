@@ -1,0 +1,292 @@
+// out: ../style.css
+
+/*
+Theme Name: wordpress theme template
+Author: Brian Beal
+Description: minimal template for building custom WordPress themes
+Text Domain: wordpressthemetemplate
+*/
+
+@import "./goodboyCSS.less";
+
+//==================================
+// Sections
+//==================================
+
+//==================================
+// header
+//==================================
+
+.navigation {
+    display: block;
+    width: 100%;    
+
+    &__container {
+        position: relative;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        @media (min-width: @screen-sm-min) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 16px;
+            bottom: 0;
+            left: 16px;
+            z-index: -1;
+            border-bottom: @border;
+        }
+    }
+
+    &__button {
+        .hidden-sm;
+        .hidden-md;
+        .hidden-lg;
+        .hidden-xl;
+        .grey;
+        position: fixed;
+        z-index: 5;
+        bottom: 40px;
+        right: 40px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &:active, &:focus, &:hover {
+            .dark-grey;
+        }
+    
+        >span {
+            .white;
+            width: 30px;
+            height: 3px;
+            margin-bottom: 4px;
+    
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &.crossed {
+
+            >span {
+
+                &:nth-child(1) {
+                    position: relative;
+                    top: 4px;
+                    transform: rotate(-45deg);
+                }
+
+                &:nth-child(2) {
+                    display: none;
+                }
+
+                &:nth-child(3) {
+                    position: relative;
+                    top: -3px;
+                    transform: rotate(45deg);
+                }
+            }
+        }
+    }
+
+    &__title {
+
+        >a {
+            display: inline-block;
+
+            &:active, &:focus, &:hover {
+                cursor: pointer;
+            }
+
+            >h1 {
+                font-size: 30px;
+                @media (min-width: @screen-sm-min) {
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+
+    &__links {
+        .dark-grey;
+        transition: .5s;
+        overflow: hidden;
+        position: fixed;
+        z-index: 4;
+        top: 0;
+        bottom: 0;
+        left:0;
+        width: 0;
+        @media (min-width: @screen-sm-min) {
+            .transparent;
+            overflow: visible;
+            position: static;
+            width: auto;
+        }
+
+        &.fullwidth {
+            @media (max-width: @screen-xs-max) {
+                width: 100%;
+                display: block;
+            }
+        }
+        
+        
+        >ul {
+            padding: 0;
+            list-style: none;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            @media (min-width: @screen-sm-min) {
+                height: auto;
+                flex-direction: row;
+            }
+
+            >li {                
+                margin-bottom: 30px;
+                @media (min-width: @screen-sm-min) {
+                    margin-bottom: 0;
+                    margin-right: 16px;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                    @media (min-width: @screen-sm-min) {
+                        margin-right: 0;
+                    }
+                }
+
+                >a {
+                    color: @white;
+                    display: inline-block;
+                    font-size: 30px;
+                    @media (min-width: @screen-sm-min) {
+                        color: @black;
+                        font-size: 16px;
+                    }
+
+                    &:active, &:focus, &:hover {
+                        color: @grey;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//==================================
+// page
+//==================================
+
+.page-main {
+
+    &__container {
+        padding: 60px 0;
+    }
+}
+
+
+//==================================
+// 404
+//==================================
+
+.error-main {
+
+    &__container {
+        .center;
+        padding: 60px 0;
+    }
+
+    &__title {
+        margin-bottom: 60px;
+    }
+
+    &__message {
+
+    }
+}
+
+
+//==================================
+// archive
+//==================================
+
+.archive-main {
+
+    &__container {
+        padding: 60px 0;
+        max-width: 600px;
+    }
+
+    &__title {
+        margin-bottom: 60px;
+    }
+}
+
+.card--archive {
+    margin-bottom: 60px;
+}
+
+
+//==================================
+// index
+//==================================
+
+.index-main {
+
+    &__container {
+        .center;
+        padding: 60px 0;
+    }
+}
+
+
+//==================================
+// single
+//==================================
+
+.single-main {
+
+    &__container {
+        padding: 60px 0;
+    }
+
+    &__title {
+        margin-bottom: 60px;
+    }
+
+    &__content {
+        line-height: 1.2;
+    }
+}
+
+
+//==================================
+// footer 
+//==================================
+
+.footer {
+
+    &__container {
+
+    }
+
+    &__copyright {
+
+    }
+}
+

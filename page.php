@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
-<main class="main">
-  <div>
+<main class="page-main">
+  <div class="page-main__container container">
     <?php
       if (have_posts()) : while(have_posts()) : the_post();
       the_content();
